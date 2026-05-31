@@ -1,6 +1,6 @@
 # GEN2 Classic Pro Label Generator · Jerrari3D
 
-A browser-based tool for creating custom **Classic Pro** faceplate labels for the GEN2 Modular Storage System. No install, no account — open `index.html` and go.
+A browser-based tool for creating custom **Classic Pro** faceplate labels for the GEN2 Modular Storage System. No install, no account - open `index.html` and go.
 
 ---
 
