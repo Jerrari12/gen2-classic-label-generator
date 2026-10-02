@@ -32,7 +32,7 @@ The model is the Classic Pro label insert (47 × 25.5 × 1.5 mm) with the flexib
 
 ## Printing in two colors
 
-The exported `.3mf` assigns the **base** to filament 1 and the **text + icon** to filament 2. Open it in OrcaSlicer, Bambu Studio, or PrusaSlicer; if your slicer doesn't auto-detect, set the base to a light filament and the text/icon to a dark one. 0.2 mm layer height works well.
+The exported `.3mf` assigns the **base** to filament 1 and the **text + icon** to filament 2. Pick the **Export format** for your slicer: **PrusaSlicer**, or **Bambu Studio / OrcaSlicer** (the two slicers read multi-part 3MF files differently, so one file can't serve both; choosing a printer preset picks the matching format for you). If your slicer doesn't auto-detect, set the base to a light filament and the text/icon to a dark one. 0.2 mm layer height works well.
 
 ---
 
