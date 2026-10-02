@@ -1600,11 +1600,11 @@ async function doExport() {
     const lay = computeLayout(slice.length, bedW, bedL, purge);
     const suffix = nPlates > 1 ? `_plate${p + 1}of${nPlates}` : '';
     if (fmt === 'stl') {
-      files.push({ name: `edgelabels${suffix}.stl`, blob: buildPlateSTL(slice, lay, bedW, bedL, capH, depth, badgeSize, bold) });
+      files.push({ name: `classicpro-labels${suffix}.stl`, blob: buildPlateSTL(slice, lay, bedW, bedL, capH, depth, badgeSize, bold) });
     } else if (fmtVal === '3mf-bambu') {
-      files.push({ name: `edgelabels${suffix}.3mf`, blob: await buildPlate3MF(slice, lay, bedW, bedL, capH, depth, badgeSize, bold) });
+      files.push({ name: `classicpro-labels${suffix}.3mf`, blob: await buildPlate3MF(slice, lay, bedW, bedL, capH, depth, badgeSize, bold) });
     } else {
-      files.push({ name: `edgelabels${suffix}.3mf`, blob: await buildPlate3MFPrusa(slice, lay, bedW, bedL, capH, depth, badgeSize, bold) });
+      files.push({ name: `classicpro-labels${suffix}.3mf`, blob: await buildPlate3MFPrusa(slice, lay, bedW, bedL, capH, depth, badgeSize, bold) });
     }
   }
 
@@ -1615,7 +1615,7 @@ async function doExport() {
     const zip = new JSZip();
     files.forEach(f => zip.file(f.name, f.blob));
     const z = await zip.generateAsync({ type: 'blob' });
-    const zname = `gen2_edgelabels_${nPlates}plates_${fmt}.zip`;
+    const zname = `gen2_classicpro_labels_${nPlates}plates_${fmt}.zip`;
     downloadBlob(z, zname);
     setStatus(`Saved ${zname} — ${nPlates} separate plate files (${(z.size / 1024).toFixed(1)} KB)`, 'ok');
   }
